@@ -19,7 +19,7 @@ class ModelInput(BaseModel):
     godziny_snu: float
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def read_root():
     return {"message": "Witaj w API serwującym model Machine Learning!"}
 
